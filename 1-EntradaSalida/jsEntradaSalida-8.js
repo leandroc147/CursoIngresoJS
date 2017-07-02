@@ -11,7 +11,10 @@ var resultado;
 num1 = document.getElementById("numeroDividendo").value;
 num2 = document.getElementById("numeroDivisor").value;
 
-resultado = parseInt(num1) % parseInt (num2);
+num1 = parseInt(num1);
+num2 = parseInt(num2);
+
+resultado = num1 % num2;
 
 alert ("el resto es "+resultado);
 }
