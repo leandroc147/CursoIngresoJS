@@ -7,12 +7,12 @@ var mesDelAño = document.getElementById('mes').value;
 	
 switch (mesDelAño)
 {
-    case "febrero":
+    case "Febrero":
         alert(" Este mes no tiene más de 29 días." );
-        
+        break;
+
      default:
         case "Enero":
-        case "Febrero":
         case "Marzo":
         case "Abril":
         case "Mayo":
