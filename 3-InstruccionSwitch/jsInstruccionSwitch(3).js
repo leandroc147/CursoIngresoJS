@@ -4,7 +4,17 @@ function Mostrar()
 var mesDelAño = document.getElementById('mes').value;
 
 //alert (mesDelAño);
-	
+
+if (mesDelAño != "Febrero")
+{    
+    alert ("Este mes tiene 30 días o más");
+}
+else
+{
+    alert ("Este mes no tiene mas de 29 días");
+}
+
+/*	
 switch (mesDelAño)
 {
     case "Febrero":
@@ -25,9 +35,9 @@ switch (mesDelAño)
         case "Diciembre":  
        
         alert("Este mes tiene 30 o más días");
-    
+   
 
 }	
-
+*/
 
 }//FIN DE LA FUNCIÓN
