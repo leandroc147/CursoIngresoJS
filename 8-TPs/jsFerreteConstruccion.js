@@ -38,7 +38,7 @@ function Circulo ()
         ancho = parseInt (ancho);
         radio = parseInt (radio);
 
-        resultado = (Math.Pi * radio * radio) *3;
+        resultado = (Math.PI * radio * radio) *3;
 
             alert (resultado);
 
@@ -64,7 +64,7 @@ var cal;
         
         cal = (largo * ancho) *3;
 
-            resultado = alert (cemento )
+            resultado = alert ("Se necesitan "+cemento +" bolsas de cemento y "+ cal+" de cal")
 
 
 
