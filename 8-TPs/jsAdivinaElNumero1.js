@@ -28,10 +28,9 @@ function verificar()
 
 
     contadorIntentos = 0;
-    contadorIntentos ++;
+    contadorIntentos +=1;
 
     numUsuario = document.getElementById("numero").value;
-	 // intentos = document.getElementById("intentos").value;
 
       if(numeroSecreto == numUsuario)
     {
@@ -43,17 +42,16 @@ function verificar()
 
     else if(numUsuario < numeroSecreto)
     {
-      alert ("le falta")
-      contadorIntentos  +1;
-      document.getElementById("intentos").value = contadorIntentos +1;
+         alert ("le falta")
+         contadorIntentos +=1;
+          document.getElementById("intentos").value = contadorIntentos;
     }
-      else
+        else
     {
-      alert("se pasó")
-      contadorIntentos +1;
-      document.getElementById("intentos").value = contadorIntentos +1;
+        alert("se pasó")
+        contadorIntentos +=1;
+          document.getElementById("intentos").value = contadorIntentos;
     }
 
-    document.getElementById("intentos").value = contadorIntentos;
 
 }
