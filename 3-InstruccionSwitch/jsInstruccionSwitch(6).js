@@ -37,11 +37,13 @@ switch(laHora)
         case "5":
         case "6":
             alert ("Es de noche");
+            break;
 
-            default:
-                alert("No existe");
 }
-
-
+if(laHora >24)
+{
+    alert("No existe");
+}
+else if(laHora <19 && laHora >12) 
 
 }//FIN DE LA FUNCIÓN
