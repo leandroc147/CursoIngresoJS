@@ -6,20 +6,35 @@ function Mostrar()
 	var respuesta='si';
 	var promedio;
 
-	contador=parseInt(contador);
+//		(confirm("Quiere agregar más numeros?"))
+while(respuesta=="si")
+{
+	contador ++;
+	num=prompt("Escriba un número ");
+	num=parseInt(num);
+
+	acumulador+=num;
+	//respuesta=confirm("si");
+	respuesta=prompt("Quiere agregar más numeros?");
+}
+
+
+	/*contador=parseInt(contador);
 	promedio=parseInt(promedio);
 
-	((contador<=5) || (respuesta=="si"))
+	while((contador<=5) || (respuesta==true)
 	{
 		num=parseInt(prompt("Escriba un número "+contador));
+		contador ++;
 		acumulador+=num;
 		respuesta=confirm("Quiere agregar más numeros?");
-
+		
 	}
-	promedio = acumulador/5;
-	alert("La suma es: "+ acumulador +"El promedio es "+ promedio);
+	promedio = acumulador/contador;
+	alert("La suma es: "+ acumulador +" El promedio es "+ promedio);
 
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;
-
-}//FIN DE LA FUNCIÓN
+*/
+}
+//FIN DE LA FUNCIÓN
