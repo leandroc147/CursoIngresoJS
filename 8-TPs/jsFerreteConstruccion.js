@@ -38,8 +38,8 @@ function Circulo ()
         ancho = parseInt (ancho);
         radio = parseInt (radio);
 
-        resultado = (Math.PI * radio * radio) *3;
-
+        resultado = (Math.floor(Math.PI * radio * radio)) *3;
+            
             alert (resultado);
 
 }

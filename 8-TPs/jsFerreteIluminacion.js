@@ -10,81 +10,60 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-    var cant=0;
-    var marcas1="ArgentinaLuz";
+    var cantidad;
+    var empresa;
     var precio=35;
     var preciofinal;
-    var preciodescuento
+    var impuesto;
+    var impuestototal=0;
 
-    /*if(preciofinal=120)
-        preciofinal= preciofinal * 1.10
-        alert("Usted pagó "+preciofinal+" de IIBB")*/
+cantidad=document.getElementById('Cantidad').value;
+cantidad=parseInt(cantidad);
+empresa=document.getElementById('Marca').value;
+     
   
+if (cantidad >= 1){
+            if(cantidad >= 6){
+        preciofinal=(precio * cantidad) * .50;
+        console.log ('Compra 6 lámparas o más, tiene descuento del 50%: $'+preciofinal);
+        }
+        else if(cantidad == 5 && empresa == 'ArgentinaLuz'){
+        preciofinal=(precio * cantidad) * .60;
+        console.log ('Compra 5 lámparas de Argentina Luz, tiene un descuento del 40%: $'+preciofinal);
+        }
+        else if(cantidad == 5 && empresa !== 'ArgentinaLuz'){
+        preciofinal=(precio * cantidad) * .70;
+        console.log ('Compra 5 lámparas que no son de Argentina Luz, tiene un descuento del 30%: '+preciofinal);
+        }
+        else if(cantidad == 4 && empresa == 'ArgentinaLuz' || cantidad == 4 && empresa == 'FelipeLamparas'){
+        preciofinal=(precio * cantidad) * .75;
+        console.log ('Compra 4 lámparas de Argentina Luz o de Felipe Lámparas, tiene un descuento del 25%: $'+preciofinal);       
+        }
+        else if(cantidad == 4 &&!(empresa == 'ArgentinaLuz'|| empresa == 'FelipeLamparas')){
+        preciofinal=(precio * cantidad) *.80;
+        console.log ('Compra 4 lámparas con un descuento del 20%: $'+preciofinal);
+        }
+        else if(cantidad == 3 && empresa == 'ArgentinaLuz'){
+        preciofinal=(precio * cantidad) *.85;
+        console.log ('Compra 3 lámparas de Argentina Luz, tiene un descuento del 15%: $'+preciofinal);
+        }
+        else if(cantidad == 3 && empresa == 'FelipeLamparas'){
+        preciofinal=(precio * cantidad) *.90;
+        console.log ('Compra 5 lámparas de Felipe Lámparas, tiene un descuento del 10%: $'+preciofinal);
+        }
+        else{
+        preciofinal=precio * cantidad    
+   
+        }
+}
+else{
+    alert('ingrese un número mayor a 1')
+}
+    if(preciofinal>120){
+        impuesto= preciofinal * .10;
+        impuestototal=Math.floor(preciofinal+impuesto);
 
- if(cant>=6)
-    {
-        precio= precio * -1.50;
-         if(preciofinal=120)
-        preciofinal= preciofinal * 1.10
-        alert("Usted pagó "+preciofinal+" de IIBB")
+        console.log('Usted pago $'+impuesto+' de IIBB');
+        console.log('El precio Final con impuesto incluido es $' +tot_impuesto);
     }
-    else if(cant ==5)
-    {
-        if(marcas1)
-        {
-            precio= precio *-1.40;
-            preciodescuento=precio
-        }
-        else
-        {
-            precio= precio *-1.30;
-        }
-     }
-
-     if(cant==4)
-     {
-         if(marcas=="ArgentinaLuz")
-         {
-             precio= precio *-0.25;
-         }                              // else if (marcas ="argluz" || marcas ="FelipeLamparas")
-         else if (marcas=="FelipeLamparas")
-         {
-             precio= precio *-0.25;
-         }                             // precio= precio *-1.25;
-     }
-        else
-     {
-         precio= precio *-1.20;
-     }
-
-     if(cant==3){
-         if(marcas="argluz"){
-            precio= precio *-1.15;
-            }
-            else if(marcas= "felipe"){
-                precio= precio *-1.10;
-            }  
-            else
-                precio= precio *-1.5;  
-      }      
-
-      if(cant<=3)
-      {
-          precio= precio;
-      }
-
-   }
-
-   marcas1=document.getElementById("Marca").value;
-   document.getElementById("Cantidad").value= cant;
-   document.getElementById("precioDescuento").value= preciodescuento; 
-
-    /* switch (marcas)
-    {
-        case"argluz":
-        if(cant>=6)
-        {
-
-        }
-    }
-*/
+}    

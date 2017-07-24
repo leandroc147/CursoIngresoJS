@@ -27,8 +27,6 @@ function verificar()
 	var numUsuario;
 
 
-    contadorIntentos = 0;
-    contadorIntentos +=1;
 
     numUsuario = document.getElementById("numero").value;
 
@@ -43,13 +41,13 @@ function verificar()
     else if(numUsuario < numeroSecreto)
     {
          alert ("le falta")
-         contadorIntentos +=1;
+         contadorIntentos ++;
           document.getElementById("intentos").value = contadorIntentos;
     }
         else
     {
         alert("se pasó")
-        contadorIntentos +=1;
+        contadorIntentos ++;
           document.getElementById("intentos").value = contadorIntentos;
     }
 
