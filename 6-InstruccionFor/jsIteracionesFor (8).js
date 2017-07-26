@@ -1,11 +1,20 @@
 function Mostrar()
 {
-var num = prompt('Número');
+var num = prompt('Ingrese un número');
+var c_primos=0;
 
 for(i=2; i<num;i++){
+    
     if(num%i==0){
-        console.log('Número primo '+num);
+        c_primos++;
+        
     }
+}
+if(c_primos>2){
+    console.log('Número no es primo');
+}
+else{
+    console.log('El número es primo');
 }
 /*
 var num = prompt('');

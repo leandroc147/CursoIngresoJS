@@ -1,10 +1,15 @@
 function Mostrar()
 {
 
-respuesta=prompt('ingrese un número')
-for( ;respuesta!=9; ){
-    console.log('7')
-   // break;
+
+for(i=0 ;;i++){
+    var respuesta=prompt('ingrese un número');
+    if(respuesta== 9){
+        break;
+    }
+   console.log(i);
+   console.log('Ingresado '+respuesta);
+   
 }
 
 

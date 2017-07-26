@@ -11,13 +11,13 @@ var num_par=0;
 
             if(i%2==0){
                num_par++
-                console.log=('cantidad de numeros pares '+num_par);
+                console.log=('El número par es '+i);
             
             }
             
-
-        else{
-        console.log('no');
-    }
+           
+        }
+        
+ console.log=('cantidad de numeros pares '+num_par);
 
 }//FIN DE LA FUNCIÓN

@@ -2,11 +2,12 @@ function Mostrar()
 {
 
 var repetciones = prompt("ingrese el número de repeticiones");
-var mensaje = ("Hola UTN FRA");
 
-for(; ; repetciones++){
-        console.log(mensaje);
-        break;
+
+for(i=0; i<repeticiones; i++){
+        var cont = i+1;
+        console.log("Hola UTN FRA");
+       
 
 }
 
